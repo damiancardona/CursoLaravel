@@ -19,3 +19,7 @@ Route::get('/',[
     'as' => 'home',
     'uses' => 'PageController@home'
 ]);
+Route::get('/all',[
+    'as' => 'all',
+    'uses' => 'QueryController@getAll'
+]);
