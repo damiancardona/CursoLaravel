@@ -10,8 +10,14 @@ use EloquentORM\User;
 
 class QueryController extends Controller
 {
-    public function getAll(){
+    public function EloquentAll(){
         $users = User::all();
-        return view('query.all', compact('users'));
+        $titulo = 'Todos los usuarios (ALL)';
+        return view('query.method', compact('users', 'titulo'));
+    }
+    public function EloquentGet($gender){
+        $users = User::where('gender', '=', $gender)->get();
+        $titulo = 'Lista los usuarios (GET)';
+        return view('query.method', compact('users', 'titulo'));
     }
 }

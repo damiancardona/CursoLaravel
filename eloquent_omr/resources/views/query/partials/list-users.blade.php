@@ -1,5 +1,3 @@
-<?php
-
 @foreach($users as $user)
     <tr>
         <td>{{ $user->id }}</td>
