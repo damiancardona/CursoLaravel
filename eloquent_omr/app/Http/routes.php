@@ -21,5 +21,9 @@ Route::get('/',[
 ]);
 Route::get('/all',[
     'as' => 'all',
-    'uses' => 'QueryController@getAll'
+    'uses' => 'QueryController@EloquentAll'
 ]);
+Route::get('/get/{gender}',[
+    'as' => 'get',
+    'uses' => 'QueryController@EloquentGet'
+])->where('gender', '[f, m]');
