@@ -30,4 +30,8 @@ Route::get('/get/{gender}',[
 Route::get('/get-custom',[
     'as' => 'get-custom',
     'uses' => 'QueryController@EloquentGetCustom'
-])->where('gender', '[f, m]');
+]);
+Route::delete('/delete/{id}',[
+    'as' => 'delete',
+    'uses' => 'QueryController@EloquentDelete'
+]);
