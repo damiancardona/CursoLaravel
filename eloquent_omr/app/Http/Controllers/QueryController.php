@@ -20,4 +20,10 @@ class QueryController extends Controller
         $titulo = 'Lista los usuarios (GET)';
         return view('query.method', compact('users', 'titulo'));
     }
+    public function EloquentGetCustom(){
+        $users = User::where('gender', '=', 'f')
+            ->get(array('id', 'name', 'biography'));
+        $titulo = 'Lista los usuarios (GET Custom - con Array)';
+        return view('query.method', compact('users', 'titulo'));
+    }
 }

@@ -27,3 +27,7 @@ Route::get('/get/{gender}',[
     'as' => 'get',
     'uses' => 'QueryController@EloquentGet'
 ])->where('gender', '[f, m]');
+Route::get('/get-custom',[
+    'as' => 'get-custom',
+    'uses' => 'QueryController@EloquentGetCustom'
+])->where('gender', '[f, m]');
