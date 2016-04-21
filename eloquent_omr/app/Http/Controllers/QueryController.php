@@ -31,4 +31,9 @@ class QueryController extends Controller
         $user->delete();
         return view('page.delete');
     }
+    public function EloquentLists(){
+        $users = User::orderBy('name', 'ASC')
+            ->lists('name', 'id');
+        return view('query.lists', compact('users'));
+    }
 }
