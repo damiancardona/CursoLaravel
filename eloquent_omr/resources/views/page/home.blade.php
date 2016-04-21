@@ -3,7 +3,10 @@
     <div class="jumbotron">
         <div class="container">
             <h1>Curso Eloquent ORM</h1>
-            <p>Texto</p>
+            <p>
+                Repositorio para la serie de Eloquent ORM Italo Morales |
+                @italomoralesf para @StydeNtet
+            </p>
         </div>
     </div>
     <div class="container">
