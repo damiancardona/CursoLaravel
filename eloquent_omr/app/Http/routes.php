@@ -43,3 +43,7 @@ Route::get('/first-last',[
     'as' => 'first-last',
     'uses' => 'QueryController@EloquentFirstLast'
 ]);
+Route::get('/paginate',[
+    'as' => 'paginate',
+    'uses' => 'QueryController@EloquentPaginate'
+]);
